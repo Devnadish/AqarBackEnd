@@ -35,6 +35,7 @@ var imageUpload = upload.fields([
 router.get("/showall", aqarController.showAll);
 /* ----------------------------------------- */
 router.get("/getdata", aqarController.getInfo);
+/* ----------------------------------------- */
 router.post(
   "/savenewinfo",imageUpload,aqarController.saveNewInfo);
 // router.post("/savenewinfo" ,imageUpload, aqarController.saveNewInfo)
