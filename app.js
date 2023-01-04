@@ -12,7 +12,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var aqarRouter = require("./routes/aqarRouter");
 var libRouter = require("./routes/libRouter");
-var newOfferRouter = require("./routes/newOfferRouter");
+var OfferRouter = require("./routes/OfferRouter");
 
 var app = express();
 
@@ -36,15 +36,15 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use("/lib", libRouter);
 app.use("/aqar", aqarRouter);
-app.use("/aqar/newoffer", newOfferRouter);
+app.use("/aqar/newoffer", OfferRouter);
 
 
 
 
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
-});
+// // catch 404 and forward to error handler
+// app.use(function(req, res, next) {
+//   next(createError(404));
+// });
 
 // error handler
 // app.use(function(err, req, res, next) {
